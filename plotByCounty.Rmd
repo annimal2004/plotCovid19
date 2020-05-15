@@ -63,19 +63,13 @@ US <-  US_deaths %>%
          county = factor(Admin2)) %>%
     select(county, state, Date, Confirmed_cases, Deaths)
 
-```
-
-
-```{r  }
-
+ 
 mydata <-US %>%
   filter(state == myState, county == myCounty)  
 
-dput(unique(as.character(US$state)))
+``` 
 
-```
-
-```{r dmv_over_time, fig.width = 10}
+```{r }
 pcase <- mydata %>%
   filter(Confirmed_cases > 0) %>%
   ggplot(aes(x = Date, y = Confirmed_cases )) +
