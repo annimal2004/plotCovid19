@@ -8,7 +8,6 @@ output: html_document
 knitr::opts_chunk$set(include  = FALSE)
 library(tidyverse)
 library(lubridate)
-library(broom)
 library(patchwork)
 ```
 
