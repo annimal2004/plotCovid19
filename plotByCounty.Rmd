@@ -77,10 +77,6 @@ pcase <- mydata %>%
   labs(title =  "Confirmed Cases" , x = NULL, y = NULL)  
   
 
-mydataTotals <- mydata %>% 
-  group_by(Date) %>%
-  summarize(total_cases = sum(Confirmed_cases), 
-            total_deaths = sum(Deaths))
   
 pdeath <- mydata %>%
   filter(Deaths > 0) %>%
